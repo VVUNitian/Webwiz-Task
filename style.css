@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.maincontainer{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url("https://source.unsplash.com/random");
+    background-color: black;
+    height: 195vh;
+    background-size: cover;
+    overflow:visible;
+}
+.maincontainer .header{
+    height: 25rem;
+    margin:0 0.5rem;
+}
+.header p{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 0rem;
+    left: 30%;
+    color: aliceblue;
+    font-size: 4rem;
+}
+.header h2{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 8rem;
+    left: 34%;
+    color: aliceblue;
+}
+.header p::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: aqua;
+    bottom: -10px;
+    left:50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+     0%{
+        width: 100px;
+     }
+     50%{
+        width: 400px;
+     }
+     100%{
+        width: 100px;
+     }
+} 
+.sidebar_menu{
+    font-family: 'Roboto', sans-serif;
+    height: 73rem;
+    width: 300px;
+    color: aliceblue;
+    box-shadow: 2px 2px 10px whitesmoke ;
+    background: hsla(339, 100%, 55%, 1);
+
+    background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1 );
+    padding: 10px;
+    position: absolute;
+    left: -330px;
+    z-index: 2;
+}
+.btn_one{
+    font-size: xx-large;
+    font-weight: 600;
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+.sidebar_menu .logo a{
+    font-size: xx-large;
+    color: aliceblue;
+    position: relative;
+    top: 5px;
+    left: 50px;
+    text-decoration: none;
+}
+.menu{
+    position: absolute;
+    left: -10px;
+    top: 150px;
+    font-size: x-large;
+    padding: 10px;
+}
+.menu li{
+    padding: 13px;
+}
+.sidebar_menu .menu li:hover{
+    box-shadow: 2px 2px 10px whitesmoke ;
+}
+.menu a{
+    color: aliceblue;
+    font-size: x-large;
+    padding: 40px 20px 20px 40px;
+    text-decoration: none;
+}
+.btn_two{
+    font-size: x-large;
+    position: relative;
+    left: 280px;
+    bottom: 50px;
+}
+.social_media {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.social_media a{
+    color: aliceblue;
+    font-size: xx-large;
+}
+.footer .social_media i:hover{
+    transform: scale(1.1);
+}
+#check:checked ~ .sidebar_menu{
+    left: 0;
+    transition: left 0.5s ease-in 0.2s;
+}
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1;
+}
+#check:checked ~ .btn_one i{
+    display: none;
+}
+.maincontainer .photos{
+    display: grid;
+    width: 95%;
+    height: 70%;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    overflow: scroll;
+    position: relative;
+    top: -13rem;
+}
+.scifiction,.family,.places{
+    position: relative;
+    height: 220px;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px aliceblue;
+    cursor: pointer;
+    padding: auto;
+}
+.scifiction img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+.family img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+.places img{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+.scifiction:hover{
+    transition: 0.5s;
+    box-shadow: 6px 6px 10px aliceblue;
+}
+.places:hover{
+    transition: 0.5s;
+    box-shadow: 6px 6px 10px aliceblue;
+}
+.family:hover{
+    transition: 0.5s;
+    box-shadow: 6px 6px 10px aliceblue;
+}
+.maincontainer #fullimageview{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.908);
+    text-align: center;
+    z-index: 3;
+}
+#fullimage{
+    padding: 24px;
+    max-width: 98%;
+    max-height: 98%;
+}
+.maincontainer #fullimageview #CloseButton{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.liveclock{
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    background: hsla(217, 100%, 50%, 1);
+
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+    display: flex;
+    height: 20%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(45deg);
+    border-radius: 1rem;
+}
+.liveclock span{
+    color: black;
+    font-size: 400%;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+.maincontainer .footer{
+    background-color: rgb(75, 73, 73);
+    position: relative;
+    bottom: 12rem;
+    height: 12%;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    border-radius: 1rem;
+}
+.footer{
+    position: fixed;
+    bottom: 0px;
+    border :3px solid aqua; 
+}
+.footer .social_media{
+    position: relative;
+    top: 1rem;
+    left: 43%;
+}
+.social_media a i{
+    margin-right: 2rem;
+}
+.footer .footeroptions{
+    display: flex;
+    position: relative;
+    top: 2rem;
+    left: 37%;
+}
+.footeroptions h5{
+    font-size: larger;
+    color: aliceblue;
+    margin-right: 2rem;
+    opacity: 0.6;
+}
+.footer .copyrightsec{
+    position: relative;
+    bottom: -4rem;
+    color: azure;
+    left: 35%;
+}
+.footeroptions h5:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 1;
+    cursor: pointer;
+}

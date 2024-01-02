@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="navbar">
+            <input type="checkbox" id="check" style="display: none"/>
+            <div class="btn_one">
+              <label for="check" style="color: whitesmoke">
+                <i class="fa-solid fa-bars"></i>
+              </label>
+            </div>
+            <div class="sidebar_menu">
+              <div class="logo">
+                <a href="#">Photo Gallery</a>
+              </div>
+              <div class="btn_two">
+                <label for="check" style="color: grey">
+                  <i class="fa-solid fa-xmark"></i>
+                </label>
+              </div>
+              <div class="menu">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-photo-film"></i>
+                   <a href="#" onclick="bkichange()">Change Theme</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-image"></i>
+                    <a href="#">All Photos</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a href="#">Shortcuts</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-photo-film"></i>
+                    <a href="#">Exhibits</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <a href="#">Events</a>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-store"></i>
+                    <a href="#">Store</a>
+                  </li>
+                  <li>
+                    <i class="fa-regular fa-comments"></i>
+                    <a href="#">Feedback</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <div class="header">
+            <p>Our Photo Gallery</p>
+            <h2>Search any image within seconds..</h2>
+            <div class="liveclock">
+              <span id="hour">00</span>
+              <span>:</span>
+              <span id="min">00</span>
+              <span>:</span>
+              <span id="seconds">00</span>
+            </div>
+        </div>
+        <div class="photos">
+          <div class="scifiction">
+            <img src="Assets/51372.jpg" alt="#" onclick="fullview(this.src)">
+          </div>
+          <div class="scifiction">
+            <img src="Assets/pexels-albin-berlin-919073.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="scifiction">
+            <img src="Assets/pexels-pixabay-2150.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="scifiction">
+            <img src="Assets/pexels-pixabay-71116.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="scifiction">
+            <img src="Assets/pexels-romain-kamin-731574.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="scifiction">
+            <img src="Assets/pexels-saya-kimura-401107.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/ian-schneider-PAykYb-8Er8-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/liv-bruce-odIhQypCuUk-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/luemen-rutkowski-ZWbBxZ6zTwM-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/natalya-zaritskaya-SIOdjcYotms-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/timon-studler-BIk2ANMmNz4-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="family">
+            <img src="Assets/tyler-nix-V3dHmb1MOXM-unsplash.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-eberhard-grossgasteiger-2098427.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-intricate-explorer-6399679.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-nektaria-kleopoulos-15071869.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-pierre-blaché-3007325.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-sanat-anghan-9683059.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+          <div class="places">
+            <img src="Assets/pexels-sharad-bhat-3974375.jpg" alt="#"  onclick="fullview(this.src)">
+          </div>
+        </div>
+        <div id="fullimageview">
+          <img id="fullimage">
+          <span id="CloseButton" onclick="closeview()">&times;</span>
+        </div>
+        <div class="footer">
+          <div class="social_media">
+            <ul>
+              <a style="padding: 5px;" href="#"><i class="fa-brands fa-facebook"></i></i></a>
+              <a style="padding: 5px;" href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+              <a style="padding: 5px;" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a style="padding: 5px;" href=""><i class="fa-brands fa-linkedin"></i></a>
+            </ul>
+          </div>
+          <div class="footeroptions">
+            <h5>Home</h5>
+            <h5>News</h5>
+            <h5>Contact</h5>
+            <h5>About Us</h5>
+            <h5>Our Team</h5>
+          </div>
+          <div class="copyrightsec">
+            <h3>COPYRIGHT &copy; 2024 Image Gallery. ALL RIGHTS RESERVED</h3>
+          </div>          
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
